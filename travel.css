@@ -219,8 +219,38 @@ html {
     box-shadow: none;
 }
 
+
+@media (max-width: 500px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        padding: 0px 40px 0px 20px;
+        display: flex;
+        justify-content: space-around;
+        /* メニューを中央配置 */
+        align-items: right;
+        transition: all 0.5s ease-in-out;
+        background: rgba(0, 0, 0, 0);
+        /* 🌟 初期状態は完全に透明 */
+        color: white;
+        z-index: 1000;
+        box-shadow: none;
+    }
+}
+
 .logo {
     font-size: 25px;
+}
+
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 15px;
+        padding: 10px 25px 10px 0px;
+    }
 }
 
 /* 🚀 スクロール後のナビバー（白背景に変更） */
@@ -230,6 +260,7 @@ html {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 /* 🚀 ナビゲーションメニュー */
 .navbar ul {
     list-style: none;
@@ -237,6 +268,17 @@ html {
     gap: 20px;
     padding: 0;
     margin: 0;
+}
+
+
+@media (max-width: 500px) {
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 1px;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .navbar ul li {
@@ -253,11 +295,22 @@ html {
     display: block;
 }
 
-/* 🚀 ONLINE SHOP のサイズ調整 */
-.shop-link {
-    white-space: nowrap;
-    /* はみ出し防止 */
+@media (max-width: 500px) {
+    .navbar ul li a {
+        color: inherit;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        transition: color 0.3s;
+        padding-right: 10px;
+        display: block;
+    }
 }
+
+.menu {
+    margin-right: -10%;
+}
+
 
 /* 🚀 ヒーローセクション（スライドショー） */
 .hero {
@@ -296,6 +349,12 @@ body {
     padding-top: 107px;
 }
 
+@media (max-width: 500px) {
+    #about-inner {
+        padding-top: 20px;
+    }
+}
+
 .About-block {
     width: 81.25%;
     margin: 0 auto;
@@ -304,10 +363,31 @@ body {
     padding-bottom: 83px;
 }
 
+@media (max-width: 500px) {
+    .About-block {
+        width: 81.25%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 83px;
+        gap: 20px;
+    }
+}
+
 .About-block .inner-block-left-ja {
     width: 47.1%;
     padding-top: 43px;
     font-family: "Shippori Mincho", serif;
+}
+
+@media (max-width: 500px) {
+    .About-block .inner-block-left-ja {
+        width: 84%;
+        padding-top: 43px;
+        font-family: "Shippori Mincho", serif;
+    }
 }
 
 .About-block .innner-block-right-en {
@@ -316,9 +396,24 @@ body {
     font-family: "Shippori Mincho", serif;
 }
 
+@media (max-width: 500px) {
+    .About-block .innner-block-right-en {
+        width: 81%;
+        padding-top: 20px;
+        font-family: "Shippori Mincho", serif;
+    }
+}
+
 .inner-block-left-ja .jabout {
     font-size: 1.3rem;
     font-family: "Shippori Mincho", serif;
+}
+
+@media (max-width: 500px) {
+    .inner-block-left-ja .jabout {
+        font-size: 1.3rem;
+        font-family: "Shippori Mincho", serif;
+    }
 }
 
 .inner-block-left-ja .text {
@@ -342,6 +437,8 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+
 
 
 /*================================================================================================
@@ -829,9 +926,10 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .jpicture .gallery {
         margin: 0 2%;
+        gap: 2px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-auto-rows: 150px;
     }

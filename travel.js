@@ -80,3 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // スクロール時にナビバーの状態を更新
     window.addEventListener("scroll", updateNavbar);
 });
+
+
