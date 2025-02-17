@@ -950,7 +950,7 @@ body {
 
 @media (max-width: 500px) {
     .jpicture .gallery {
-        margin: 0 2%;
+        margin: 0 -2%;
         gap: 2px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-auto-rows: 180px;
