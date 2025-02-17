@@ -365,8 +365,8 @@ body {
     padding: 10px;
     margin: 0 10%;
     /* 左右に10%の余白を追加 */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
     padding-bottom: 20vh
 }
 
@@ -813,8 +813,8 @@ body {
 @media (max-width: 2500px) {
     .jpicture .gallery {
         margin: 0 10%;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-auto-rows: 150px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
     }
 }
 
