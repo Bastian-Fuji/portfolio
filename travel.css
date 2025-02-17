@@ -578,7 +578,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
 
 
 .image-container img {
@@ -619,7 +619,7 @@ body {
 
 .image-container:hover .image-overlay {
     opacity: 1;
-} 
+}
 
 /*===================================================================================================*/
 
@@ -1057,10 +1057,10 @@ body {
 
 @media (max-width: 500px) {
     .jpicture .gallery {
-        margin: 0 -2%;
+        margin: 0 2%;
         gap: 2px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-auto-rows: 180px;
+        grid-auto-rows: 150px;
     }
 }
 
@@ -1423,7 +1423,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
 
 
 .image-container img {
@@ -1455,7 +1455,7 @@ body {
 
 .image-container:hover .image-overlay {
     opacity: 1;
-} 
+}
 
 /* 特定の画像サイズ変更 */
 .gallery-item:nth-child(1) {
