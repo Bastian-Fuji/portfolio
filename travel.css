@@ -365,7 +365,7 @@ body {
 
 @media (max-width: 500px) {
     .About-block {
-        width: 81.25%;
+        width: 88%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -384,8 +384,8 @@ body {
 
 @media (max-width: 500px) {
     .About-block .inner-block-left-ja {
-        width: 84%;
-        padding-top: 43px;
+        width: 88%;
+        padding-top: 30px;
         font-family: "Shippori Mincho", serif;
     }
 }
@@ -398,14 +398,14 @@ body {
 
 @media (max-width: 500px) {
     .About-block .innner-block-right-en {
-        width: 81%;
-        padding-top: 20px;
+        width: 88%;
+        padding-top: 30px;
         font-family: "Shippori Mincho", serif;
     }
 }
 
 .inner-block-left-ja .jabout {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: "Shippori Mincho", serif;
 }
 
@@ -417,19 +417,41 @@ body {
 }
 
 .inner-block-left-ja .text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: "Shippori Mincho", serif;
+}
+
+@media (max-width: 500px) {
+    .inner-block-left-ja .text {
+        font-size: 1.1rem;
+        font-family: "Shippori Mincho", serif;
+    }
 }
 
 .innner-block-right-en .enabout {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: "Shippori Mincho", serif;
 }
 
+@media (max-width: 500px) {
+    .innner-block-right-en .enabout {
+        font-size: 1.3rem;
+        font-family: "Shippori Mincho", serif;
+    }
+}
+
 .inner-block-right-en .text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: "Shippori Mincho", serif;
     font-weight: normal;
+}
+
+@media (max-width: 500px) {
+    .inner-block-right-en .text {
+        font-size: 1.2rem;
+        font-family: "Shippori Mincho", serif;
+        font-weight: normal;
+    }
 }
 
 .shippori-mincho-regular {
@@ -447,7 +469,7 @@ body {
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:  #ececec;
     font-family: 'Helvetica', sans-serif;
     scroll-behavior: smooth;
     /* スムーズスクロールを有効に */
@@ -931,7 +953,7 @@ body {
         margin: 0 2%;
         gap: 2px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-auto-rows: 150px;
+        grid-auto-rows: 180px;
     }
 }
 
