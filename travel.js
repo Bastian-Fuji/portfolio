@@ -1,3 +1,43 @@
+// 画像のプリロード処理
+function preloadImages(imageUrls, callback) {
+    let loadedCount = 0;
+    const totalImages = imageUrls.length;
+
+    imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = img.onerror = () => {
+            loadedCount++;
+            if (loadedCount === totalImages) {
+                callback();
+            }
+        };
+    });
+}
+
+// ページ内の全画像URLを取得
+function getAllImageUrls() {
+    const images = document.querySelectorAll('img');
+    return Array.from(images).map(img => img.src);
+}
+
+// 全画像読み込み後にメインコンテンツを表示
+window.addEventListener('DOMContentLoaded', () => {
+    const imageUrls = getAllImageUrls();
+    preloadImages(imageUrls, () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+
+        // ローディング画面をフェードアウト
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+        }, 500);
+    });
+});
+
+
 const images = [
     "images/Thai.jpg",
     "images/Phuket.jpg",
