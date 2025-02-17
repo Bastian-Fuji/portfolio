@@ -122,3 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function openMap(location) {
+    const url = `https://www.google.com/maps/search/?q=${encodeURIComponent(location)}`;
+    window.open(url, '_blank');
+}
