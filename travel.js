@@ -39,9 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 const images = [
-    "images/Thai.jpg",
-    "images/Phuket.jpg",
-    "images/PhiPhi.jpg",
+    "images/Thai.webp",
+    "images/Phuket.webp",
+    "images/PhiPhi.webp",
 ];
 
 let currentIndex = 0;
