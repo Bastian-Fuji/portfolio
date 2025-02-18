@@ -1424,11 +1424,31 @@ body {
     opacity: 1;
 }
 
-/* 特定の画像サイズ変更 */
-.gallery-item:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
+
+
+
+.wpicture {
+    padding-top: 10vh;
 }
+
+.worldword {
+    margin: 0 10%;
+    font-weight: bold;
+    padding-bottom: 5vh;
+}
+
+
+/* 画像ギャラリーのグリッド設定 */
+.wpicture .gallery {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 10%;
+    /* 左右に10%の余白を追加 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+}
+
 
 @media (max-width: 2500px) {
     .jpicture .gallery {
@@ -1440,15 +1460,39 @@ body {
 
 @media (max-width: 1500px) {
     .jpicture .gallery {
-        margin: 0 10%;
+        margin: 0 7%;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-auto-rows: 150px;
     }
 }
 
-
 @media (max-width: 768px) {
     .jpicture .gallery {
+        margin: 0 2%;
+        gap: 2px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+    }
+}
+
+@media (max-width: 2500px) {
+    .wpicture .gallery {
+        margin: 0 12%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .wpicture .gallery {
+        margin: 0 7%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wpicture .gallery {
         margin: 0 2%;
         gap: 2px;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
