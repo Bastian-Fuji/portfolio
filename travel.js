@@ -89,19 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // 🚀 1. スムーズスクロール（既存のコード）
     navLinks.forEach(link => {
         link.addEventListener("click", (event) => {
-            event.preventDefault(); // デフォルトのジャンプを無効化
+            const href = link.getAttribute("href");
 
-            const targetId = link.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
+            // ページ内リンク（#から始まる）だけ防ぐ
+            if (href && href.startsWith("#")) {
+                event.preventDefault();
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50, // ナビゲーションバーの高さを考慮
-                    behavior: "smooth"
-                });
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: "smooth"
+                    });
+                }
             }
+            // href="movie.html" のような外部リンクはそのまま遷移させる
         });
     });
+
 
     // 🚀 2. ナビゲーションバーの色変更（初回チェック + スクロール時の変更）
     function updateNavbar() {
@@ -126,3 +133,28 @@ function openMap(location) {
     const url = `https://www.google.com/maps/search/?q=${encodeURIComponent(location)}`;
     window.open(url, '_blank');
 }
+
+
+const loadingScreen = document.getElementById('loading-screen');
+const mainContent = document.getElementById('main-content');
+
+loadingScreen.style.opacity = '0';
+
+window.addEventListener('DOMContentLoaded', () => {
+    const imageUrls = getAllImageUrls();
+    preloadImages(imageUrls, () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+
+        if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                if (mainContent) {
+                    mainContent.style.display = 'block';
+                }
+            }, 500);
+        }
+    });
+});
+

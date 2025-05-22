@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="more_movie.css">
+</head>
+
+<body>
+
+    <!-- Contenu principal -->
+    <div class="story-container">
+        <!-- SECTION 1: THE BEGINNING OF THE ADVENTURE -->
+        <section class="story-section" id="section1">
+            <div class="text-block">
+                <h2>Green Book</h2>
+                <p>『グリーンブック』は、人種差別が色濃く残る1960年代アメリカを舞台に、黒人ピアニストと白人運転手の旅路を通して描かれる心温まるヒューマンドラマです。対照的な二人が少しずつ心を通わせていく様子が丁寧に描かれ、ユーモアと感動が絶妙に織り交ぜられています。人間の尊厳や友情の美しさを静かに、しかし深く伝えてくれる作品です。
+                </p>
+                <div class="container">
+                    <div class="list">
+                        <div class="list-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                                        stroke-width="2" />
+                                    <path d="M13 2v7h7" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="content">
+                                <div class="title">ストーリー</div>
+                                <div class="subtitle" class="rating">★★★★☆(4.0)</div>
+
+                            </div>
+                            <div class="date"></div>
+                        </div>
+
+                        <div class="list-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2" />
+                                    <circle cx="12" cy="10" r="3" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="content">
+                                <div class="title">演出・映像</div>
+                                <div class="subtitle" class="rating">★★★☆☆ (3.0)</div>
+                            </div>
+                            <div class="date"></div>
+                        </div>
+
+                        <div class="list-item">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path
+                                        d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="content">
+                                <div class="title">キャラクター</div>
+                                <div class="subtitle" class="rating">★★★★★ (5.0)</div>
+                            </div>
+                            <div class="date"></div>
+                        </div>
+                    </div>
+
+                    <button class="show-hide-btn">
+                        <span class="show">Show All</span>
+                        <span class="hide">Hide</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                            <path d="M4 6l4 4 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="image-block">
+                <img src="../movie_images/gre.webp" alt="Illustration of the Enchanted Forest"
+                    class="image-placeholder" />
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+        <img class="modal-image" src="" alt="Image en grand">
+        <div class="modal-close"><span>×</span></div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="more_movie.js"></script>
+
+</html>
